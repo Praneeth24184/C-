@@ -1,0 +1,21 @@
+//eligible for voting
+
+#include <iostream.h> void main()
+
+int age;
+
+if (age >= 18)
+{
+
+Cout<<"person is eligible for voting";
+
+}
+
+else
+{
+
+Cout<<" person not eligible for voting";
+
+}
+
+}
