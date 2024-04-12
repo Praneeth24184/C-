@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+class Number {
+protected:
+    int num;
+public:
+    void setNumber(int n) {
+        num = n;
+    }
+};
+
+class Square : public Number {
+public:
+    int calculateSquare() {
+        return num * num;
+    }
+};
+
+class Cube : public Number {
+public:
+    int calculateCube() {
+        return num * num * num;
+    }
+};
+
+int main() {
+    Square squareObj;
