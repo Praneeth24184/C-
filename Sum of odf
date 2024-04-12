@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main() {
+    int n, sum = 0;
+    
+    std::cout << "Enter a natural number: ";
+    std::cin >> n;
+    
+    for (int i = 1; i <= n; i++) {
+        if (i % 2 != 0) {
+            sum += i;
+        }
+    }
+    
+    std::cout << "Sum of odd numbers up to " << n << " is: " << sum << std::endl;
+    
+    return 0;
+}
