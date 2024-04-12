@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int gcd(int a, int b) {
+    // Calculate the greatest common divisor using the Euclidean algorithm
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+int lcm(int a, int b) {
+    // Calculate the least common multiple using the relationship between LCM and GCD
+    return (a * b) / gcd(a, b);
+}
+
+int main() {
+    int num1, num2;
+
+    std::cout << "Enter two integers: ";
+    std::cin >> num1 >> num2;
+
+    int greatestCommonDivisor = gcd(num1, num2);
+    int leastCommonMultiple = lcm(num1, num2);
+
+    std::cout << "GCD of " << num1 << " and " << num2 << " is: " << greatestCommonDivisor << std::endl;
+    std::cout << "LCM of " << num1 << " and " << num2 << " is: " << leastCommonMultiple << std::endl;
+
+    return 0;
